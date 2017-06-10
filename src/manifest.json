@@ -1,0 +1,46 @@
+{
+  "name": "TipidPC Web Scraper",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "description": "Scrapes data from TipidPC.com",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "permissions": [
+    "tabs",
+    "http://tipidpc.com/*",
+    "https://tipidpc.com/*",
+    "background",
+    "bookmarks",
+    "clipboardRead",
+    "clipboardWrite",
+    "contentSettings",
+    "cookies",
+    "*://*.google.com/",
+    "debugger",
+    "history",
+    "idle",
+    "management",
+    "notifications",
+    "pageCapture",
+    "topSites",
+    "storage",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://tipidpc.com/*",
+        "https://tipidpc.com/*"
+      ],
+      "js": [
+        "contentscript.bundle.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ]
+}

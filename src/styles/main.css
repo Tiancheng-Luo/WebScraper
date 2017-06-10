@@ -1,0 +1,12 @@
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.item-name {
+    font-weight: 100;
+    color: greenyellow;
+}
+
+.item-name:visited {
+    color: #888888;
+}
