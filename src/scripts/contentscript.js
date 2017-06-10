@@ -1,7 +1,10 @@
-import '../images/icon-16.png';
-import '../images/icon-128.png';
-import '../styles/main.css';
+import './imports.js';
+import $ from 'jquery';
 
-console.log('Hello World!');
+console.log('Starting WebScraper...');
 
+$(document).ready(function () {
+    $('ul.catlist > li > table * tr')
+        .append('<td class="column-actions"><button name="copy">Copy</button></td>');
+});
 
